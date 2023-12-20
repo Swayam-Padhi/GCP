@@ -29,5 +29,6 @@ jobs:
 
     - name: Deploy via GCS
       run: |
+        gsutil ls
         gsutil -m rm -rf gs://git1_bucket/* || echo "$?"
         gsutil -m cp -r * gs://git1_bucket/
